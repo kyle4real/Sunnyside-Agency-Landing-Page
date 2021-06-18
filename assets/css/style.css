@@ -39,6 +39,7 @@ body {
 }
 
 h1,
+h2,
 p,
 ul,
 li {
@@ -89,13 +90,25 @@ img {
     z-index: 10;
 }
 
+.br-mobile {
+    display: block;
+}
+.br-desktop {
+    display: none;
+}
+
 @media screen and (min-width: 768px) {
-    /* .top-grid {} */
 }
 @media screen and (min-width: 1024px) {
     .top-grid {
         margin-left: auto;
         margin-right: auto;
+    }
+    .br-mobile {
+        display: none;
+    }
+    .br-desktop {
+        display: block;
     }
 }
 
@@ -175,5 +188,106 @@ header {
         font-size: 3.2rem;
         margin-top: -8rem;
         margin-bottom: 5rem;
+    }
+}
+
+/* Section 1 - TRANSFORM*/
+
+.transform {
+    display: flex;
+    flex-direction: column;
+}
+
+.transform__card {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    color: var(--dark-blue);
+    text-align: center;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.card__header {
+    font-family: var(--font-Fraunces);
+    font-size: 2rem;
+}
+.card__description {
+    color: var(--dark-grayish-blue);
+    line-height: 1.6;
+}
+.card__header,
+.card__description {
+    margin-bottom: 2rem;
+}
+.card__link {
+    font-family: var(--font-Fraunces);
+    color: var(--dark-blue);
+    position: relative;
+}
+.card__link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: -5%;
+    width: 110%;
+    height: 10px;
+    opacity: 50%;
+    background: var(--yellow);
+    z-index: -1;
+    border-radius: 5px;
+}
+.card__link-2 {
+    font-family: var(--font-Fraunces);
+    color: var(--dark-blue);
+    position: relative;
+}
+.card__link-2::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: -5%;
+    width: 110%;
+    height: 10px;
+    opacity: 50%;
+    background: var(--soft-red);
+    z-index: -1;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .transform__img,
+    .transform__card {
+        width: 50%;
+        margin: 0;
+        padding: 0;
+    }
+    .transform__card {
+        display: flex;
+        align-items: center;
+        text-align: start;
+    }
+    .card__data {
+        margin-left: 1.5rem;
+    }
+    .transform {
+        flex-direction: row-reverse;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .card__data {
+        margin-left: 5rem;
+    }
+}
+
+/* Section 2 - STAND OUT (editing section 1) */
+@media screen and (min-width: 768px) {
+    .transform-2 {
+        flex-direction: row;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .card__data-2 {
+        margin-left: 0;
+        margin-right: 5rem;
     }
 }
