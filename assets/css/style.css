@@ -152,6 +152,28 @@ header {
     flex-direction: column;
 }
 .hero__header {
+    color: var(--white);
+    font-family: var(--font-Fraunces);
+    font-size: 2.8rem;
+    text-transform: uppercase;
     text-align: center;
-    margin-bottom: 3.6rem;
+    margin-bottom: 3rem;
+    letter-spacing: 4px;
+}
+
+@media screen and (min-width: 768px) {
+    .hero__header-br {
+        display: none;
+    }
+    .hero__header {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .hero__header {
+        font-size: 3.2rem;
+        margin-top: -8rem;
+        margin-bottom: 5rem;
+    }
 }
