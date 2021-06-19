@@ -36,6 +36,8 @@ body {
     font-family: var(--font-Barlow);
     font-size: var(--font-size-body);
     font-weight: 600;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 h1,
@@ -219,6 +221,7 @@ header {
 .card__description {
     margin-bottom: 2rem;
 }
+
 .card__link {
     font-family: var(--font-Fraunces);
     color: var(--dark-blue);
@@ -233,23 +236,6 @@ header {
     height: 10px;
     opacity: 50%;
     background: var(--yellow);
-    z-index: -1;
-    border-radius: 5px;
-}
-.card__link-2 {
-    font-family: var(--font-Fraunces);
-    color: var(--dark-blue);
-    position: relative;
-}
-.card__link-2::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    right: -5%;
-    width: 110%;
-    height: 10px;
-    opacity: 50%;
-    background: var(--soft-red);
     z-index: -1;
     border-radius: 5px;
 }
@@ -280,6 +266,23 @@ header {
 }
 
 /* Section 2 - STAND OUT (editing section 1) */
+.card__link-2 {
+    font-family: var(--font-Fraunces);
+    color: var(--dark-blue);
+    position: relative;
+}
+.card__link-2::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: -5%;
+    width: 110%;
+    height: 10px;
+    opacity: 50%;
+    background: var(--soft-red);
+    z-index: -1;
+    border-radius: 5px;
+}
 @media screen and (min-width: 768px) {
     .transform-2 {
         flex-direction: row;
@@ -290,4 +293,8 @@ header {
         margin-left: 0;
         margin-right: 5rem;
     }
+}
+
+/* Section 3 - GRAPHIC DESIGN & PHOTOGRAPHY */
+.gd-ph__container {
 }
