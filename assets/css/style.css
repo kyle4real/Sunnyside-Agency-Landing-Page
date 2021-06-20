@@ -7,7 +7,7 @@
     /* primary colors */
     --soft-red: hsl(7, 99%, 70%);
     --yellow: hsl(51, 100%, 49%);
-    --dark-desaturated-cyan: dhsl(167, 40%, 24%);
+    --dark-desaturated-cyan: hsl(167, 40%, 24%);
     --dark-blue: hsl(198, 62%, 26%);
     --dark-moderate-cyan: hsl(168, 34%, 41%);
     /* neutral colors */
@@ -313,10 +313,12 @@ header {
 
 /* GRAPHIC DESIGN */
 
-.gd__container {
+.gd__container,
+.ph__container {
     position: relative;
 }
-.gd {
+.gd,
+.ph {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -328,11 +330,24 @@ header {
     align-items: flex-end;
     justify-content: center;
 }
-.gd__data {
+.gd__data,
+.ph__data {
     text-align: center;
     margin-bottom: 20%;
 }
-.gd__header {
-    color: #333;
+.gd__data {
+    color: var(--dark-desaturated-cyan);
+}
+.ph__data {
+    color: var(--dark-blue);
+}
+.gd__header,
+.ph__header {
+    font-family: var(--font-Fraunces);
     margin-bottom: 2rem;
+}
+.gd__description,
+.ph__description {
+    line-height: 1.6;
+    font-size: 0.98rem;
 }
