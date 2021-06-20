@@ -452,3 +452,15 @@ header {
         margin-right: auto;
     }
 }
+
+/* PHOTO GRID */
+.photo-grid__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (min-width: 768px) {
+    .photo-grid__container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
