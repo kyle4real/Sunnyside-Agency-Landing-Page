@@ -172,6 +172,10 @@ header {
     color: var(--dark-grayish-blue);
 }
 
+.nav__item a:hover {
+    color: var(--very-dark-desaturated-blue);
+}
+
 #navButton {
     font-family: var(--font-Fraunces);
     text-transform: uppercase;
@@ -184,7 +188,15 @@ header {
     border: none;
     outline: none;
     cursor: pointer;
+    border: 2px solid transparent;
 }
+
+#navButton:hover {
+    background: transparent;
+    border: 2px solid var(--yellow);
+    background: rgba(250, 212, 0, 0.4);
+}
+
 @media screen and (min-width: 768px) {
     .nav__toggle {
         display: none;
@@ -209,8 +221,16 @@ header {
     .nav__item a {
         color: var(--white);
     }
+    .nav__item a:hover {
+        color: rgba(255, 255, 255, 0.8);
+    }
     #navButton {
         background: var(--white);
+    }
+    #navButton:hover {
+        border: 2px solid transparent;
+        background: rgba(255, 255, 255, 0.3);
+        color: var(--white);
     }
 }
 
