@@ -40,7 +40,7 @@ Users should be able to:
 
 ### What I learned
 
--   Media querie best practices
+-   Media queries best practices
 -   Responsive images
 -   Puesdo elements
 
