@@ -21,6 +21,9 @@
     --font-size-body: 1.125rem; /* 18px */
     --font-Barlow: "Barlow", sans-serif;
     --font-Fraunces: "Fraunces", serif;
+
+    /* transitions */
+    --speed: 0.3s;
 }
 
 /* BASE */
@@ -148,6 +151,8 @@ header {
     display: flex;
     justify-content: center;
     text-align: center;
+    opacity: 0;
+    transition: top 0.5s ease;
 }
 
 .nav__menu::after {
@@ -170,6 +175,7 @@ header {
 }
 .nav__item a {
     color: var(--dark-grayish-blue);
+    transition: color var(--speed) ease;
 }
 
 .nav__item a:hover {
@@ -189,6 +195,7 @@ header {
     outline: none;
     cursor: pointer;
     border: 2px solid transparent;
+    transition: color var(--speed) ease, background var(--speed) ease, border var(--speed) ease;
 }
 
 #navButton:hover {
@@ -206,6 +213,7 @@ header {
         background: transparent;
         width: auto;
         height: auto;
+        opacity: 1;
     }
     .nav__menu::after {
         display: none;
@@ -237,6 +245,7 @@ header {
 /* show menu */
 .show {
     top: calc(var(--header-height) + 30px);
+    opacity: 1;
 }
 
 /* hero */
@@ -574,6 +583,7 @@ footer {
 .footer__logo h1 {
     color: var(--dark-desaturated-cyan);
     font-weight: 700;
+    cursor: pointer;
 }
 
 .footer__nav {
@@ -584,6 +594,11 @@ footer {
 
 .footer__nav li a {
     color: var(--dark-desaturated-cyan);
+    transition: color var(--speed) ease;
+}
+
+.footer__nav li a:hover {
+    color: var(--white);
 }
 
 .footer__social-media {
@@ -592,6 +607,16 @@ footer {
 
 .footer__social-link:not(:last-child) {
     margin-right: 2rem;
+}
+
+.footer__social-link i {
+    font-size: 1.4rem;
+    color: var(--dark-desaturated-cyan);
+    transition: color var(--speed) ease;
+}
+
+.footer__social-link i:hover {
+    color: var(--white);
 }
 
 @media screen and (min-width: 768px) {
